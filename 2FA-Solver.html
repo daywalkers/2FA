@@ -14,6 +14,12 @@
         font-size: 24px;
         text-align: center;
         padding: 5px;
+        resize: none;
+        overflow: hidden;
+        border: none;
+        background-color: #00ff00;
+        color: #000;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -32,7 +38,7 @@
           <div class="input"><span id='updatingIn'></span></div>
           <br>
           <label>One-time Password</label>
-          <div class="input"><b><textarea readonly id="otp" class="text3style otp-box" style="background:#00ff00"></textarea></b></div><br><br>
+          <div class="input"><textarea readonly id="otp" class="otp-box"></textarea></div><br><br>
         </div>
         <div class="clearfix col-md-6">
           <label>Secret (hex)</label>
@@ -40,8 +46,7 @@
             <span id='secretHexLength'></span></div><br>
           <label>Unix epoch div 30 (padded hex)</label>
           <div class="input"><span class="label label-default" id='epoch'></span></div><br>
-          <label>HMAC(secret, time)</label>
-          <div class="input" id='hmac'></div><br>
+          <label>          <div class="input" id='hmac'></div><br>
         </div>
       </div>
       <br>
