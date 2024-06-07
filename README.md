@@ -3,8 +3,6 @@
 > A pure JavaScript Web Page to retrieve real-time OTP through a web page and generate/scan QR codes.
 > > It can be used as an offline web page by downloading as it doesn't have any internet dependency.
 > 
-> Inspired and modify from [@nuintun](https://github.com/nuintun/) - [nuintun/qrcode](https://github.com/nuintun/qrcode) and [@russau](https://github.com/russau/) - [russau/ArduinoOTP](https://github.com/russau/ArduinoOTP)
-
 
 ### Contents
 - [Overview](#overview)
@@ -19,13 +17,9 @@
 
 2FA Solver is a Javascript+HTML based web page that helps to generate/scan QR codes and retrieve One Time Password real-time using the secret key.
 
-It can be used offline without any internet connection by downloading the [2FA-Solver.html](https://github.com/iamyuthan/2FA-Solver/blob/Master/2FA-Solver.html) file along with the [configs](https://github.com/iamyuthan/2FA-Solver/tree/Master/configs) folder and accessing it from the local machine. 
-It can also be deployed on an online environment, as shown in the [2FA Solver](https://iamyuthan.github.io/2FA-Solver/2FA-Solver.html) site. However, generating/scanning QR codes and retrieving real-time OTP does not require an internet connection.
 
 
 ### 2FA-Solver Web Page
-
-[2FA Solver](https://iamyuthan.github.io/2FA-Solver/2FA-Solver.html)
 
 > [![image](https://user-images.githubusercontent.com/83505381/146655188-d981fdfd-2d93-4b1e-814f-7f036917708a.png)](https://iamyuthan.github.io/2FA-Solver/2FA-Solver.html)
 > [![image](https://user-images.githubusercontent.com/83505381/146655222-f185a1cb-fd1e-433b-a7e6-34511aae2df9.png)](https://iamyuthan.github.io/2FA-Solver/2FA-Solver.html)
