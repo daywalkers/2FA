@@ -48,12 +48,21 @@
 	<span class="fw-semibold" style="color:#ffe600">2FA Solver</span></a>
 	</div>
       <ul class="tabs clearfix">
-        <li class="selected">QR Code (Image) Generator/Encoder</li>
-        <li>QR Code (Image) Scanner/Decoder</li>
-	<li>Retrieve One-Time Password in Real-Time</li>
-      </ul></br>	  
-      <ul class="content clearfix">
-        <li class="encode selected">
+  <li>Retrieve One-Time Password in Real-Time</li>
+  <li>QR Code (Image) Generator/Encoder</li>
+  <li>QR Code (Image) Scanner/Decoder</li>
+</ul></br>	  
+     <ul class="content clearfix">
+  <li class="retrieve selected">
+    <!-- Retrieve One-Time Password in Real-Time content -->
+  </li>
+  <li class="encode">
+    <!-- QR Code (Image) Generator/Encoder content -->
+  </li>
+  <li class="decode">
+    <!-- QR Code (Image) Scanner/Decoder content -->
+  </li>
+</ul>
           <p><label>QR code content：</label></p>
           <div><textarea id="encode-text" style="background:#ccf2ff">Inspired from Nuintun and Russau! </textarea></div>
           <p>
@@ -200,7 +209,8 @@
       // Tab Switch
       var nav = $('.tabs li');
       var content = $('.content li');
-
+nav.first().addClass('selected');
+content.first().addClass('selected');
       nav.on('click', function () {
         var target = $(this);
 
