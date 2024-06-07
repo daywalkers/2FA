@@ -8,9 +8,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
     }
     h1 {
       color: #ffe600;
@@ -27,6 +32,12 @@
     }
     .result {
       margin-bottom: 20px;
+    }
+    .code {
+      background-color: #ccf2ff;
+    }
+    .otp {
+      background-color: #00ff00;
     }
     .button {
       background-color: green;
@@ -47,39 +58,41 @@
   </style>
 </head>
 <body>
-  <h1>2FA Solver</h1>
-  <div>
-    <label for="secret">Secret (base32)</label>
-    <textarea id="secret" rows="1">4CMGD6DHKGLORNS5</textarea>
-    <div class="result">
-      <label>Updating in</label>
-      <span id="updatingIn"></span>
+  <div class="container">
+    <h1>2FA Solver</h1>
+    <div>
+      <label for="secret">Secret (base32)</label>
+      <textarea id="secret" class="code" rows="1">4CMGD6DHKGLORNS5</textarea>
+      <div class="result">
+        <label>Updating in</label>
+        <span id="updatingIn"></span>
+      </div>
+      <div class="result">
+        <label>One-time Password</label>
+        <textarea readonly id="otp" class="otp" rows="1"></textarea>
+      </div>
     </div>
-    <div class="result">
-      <label>One-time Password</label>
-      <textarea readonly id="otp" rows="1"></textarea>
+    <div>
+      <label>Secret (hex)</label>
+      <span id="secretHex"></span>
+      <span id="secretHexLength"></span>
+      <div class="result">
+        <label>Unix epoch div 30 (padded hex)</label>
+        <span id="epoch"></span>
+      </div>
+      <div class="result">
+        <label>HMAC(secret, time)</label>
+        <div id="hmac"></div>
+      </div>
     </div>
+    <a href="https://daywalkers.github.io/2FA/#user-guide" target="_blank" class="button blink">
+      Click here to check the User Guide of 2FA Solver
+    </a>
+    <p>
+      <u>Author:</u> <b>Daywalkerz K</b><br>
+      <a href="https://github.com/daywalkers/" target="_blank">GitHub</a>
+    </p>
   </div>
-  <div>
-    <label>Secret (hex)</label>
-    <span id="secretHex"></span>
-    <span id="secretHexLength"></span>
-    <div class="result">
-      <label>Unix epoch div 30 (padded hex)</label>
-      <span id="epoch"></span>
-    </div>
-    <div class="result">
-      <label>HMAC(secret, time)</label>
-      <div id="hmac"></div>
-    </div>
-  </div>
-  <a href="https://daywalkers.github.io/2FA/#user-guide" target="_blank" class="button blink">
-    Click here to check the User Guide of 2FA Solver
-  </a>
-  <p>
-    <u>Author:</u> <b>Daywalkerz K</b><br>
-    <a href="https://github.com/daywalkers/" target="_blank">GitHub</a>
-  </p>
   <script src="configs/jquery.slim.min.js"></script>
   <script type="text/javascript">
       
