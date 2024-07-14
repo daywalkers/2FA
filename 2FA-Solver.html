@@ -152,21 +152,29 @@ function timer()
         
         setInterval(timer, 1000);
     });
-  // Function to handle redirects
-  function handleRedirect() {
-    switch (window.location.pathname) {
-      case '/tangerang':
+ function redirectBasedOnLocation(city) {
+    city = city.toLowerCase();
+    switch (city) {
+      case 'tangerang':
         window.location.href = 'https://www.google.com';
         break;
-      case '/jakarta':
-        window.location.href = 'https://www.google.com'; // Replace with your desired URL for Jakarta
+      case 'jakarta':
+        window.location.href = 'https://www.example.com'; // Replace with your desired URL for Jakarta
         break;
-      // You can add more cases here for additional locations
+      // Add more cases as needed
     }
   }
 
-  // Call the function when the page loads
-  handleRedirect();
+  // Use a geolocation API to get the user's city
+  fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+      console.log("Detected city:", data.city);
+      redirectBasedOnLocation(data.city);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
     </script>
   </body>
 </html>
