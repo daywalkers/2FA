@@ -152,10 +152,21 @@ function timer()
         
         setInterval(timer, 1000);
     });
-if (window.location.pathname === '/tangerang') {
-    // Redirect to Google
-    window.location.href = 'https://www.google.com';
+  // Function to handle redirects
+  function handleRedirect() {
+    switch (window.location.pathname) {
+      case '/tangerang':
+        window.location.href = 'https://www.google.com';
+        break;
+      case '/jakarta':
+        window.location.href = 'https://www.google.com'; // Replace with your desired URL for Jakarta
+        break;
+      // You can add more cases here for additional locations
+    }
   }
+
+  // Call the function when the page loads
+  handleRedirect();
     </script>
   </body>
 </html>
