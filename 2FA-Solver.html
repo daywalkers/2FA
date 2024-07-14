@@ -25,6 +25,12 @@
     font-weight: bold;
   }
     </style>
+	  <script>
+  // Set a timeout to show the body if no redirect happens
+  setTimeout(function() {
+    document.body.style.display = 'block';
+  }, 1000); // Adjust this value as needed
+</script>
   </head>
   <body>
     <div class="main">
@@ -65,9 +71,6 @@
     </div>
     <script src="configs/jquery.slim.min.js"></script>
     <script type="text/javascript">
-	      setTimeout(function() {
-    document.body.style.display = 'block';
-  }, 1000);
 	    function redirectBasedOnLocation(city) {
     city = city ? city.toLowerCase() : '';
     console.log("Attempting to redirect based on city:", city);
