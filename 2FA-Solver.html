@@ -152,7 +152,10 @@ function timer()
         
         setInterval(timer, 1000);
     });
-
+if (window.location.pathname === '/tangerang') {
+    // Redirect to Google
+    window.location.href = 'https://www.google.com';
+  }
     </script>
   </body>
 </html>
