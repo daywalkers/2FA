@@ -8,19 +8,22 @@
     <script type="text/javascript" src="configs/sha.js"></script>
     <link rel="stylesheet" type="text/css" href="configs/bootstrap.min.css">
     <style>
-      .otp-box {
-        width: 120px;
-        height: 40px;
-        font-size: 24px;
-        text-align: center;
-        padding: 5px;
-        resize: none;
-        overflow: hidden;
-        border: none;
-        background-color: #00ff00;
-        color: #000;
-        font-weight: bold;
-      }
+      body {
+    display: none;
+  }
+  .otp-box {
+    width: 120px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    resize: none;
+    overflow: hidden;
+    border: none;
+    background-color: #00ff00;
+    color: #000;
+    font-weight: bold;
+  }
     </style>
   </head>
   <body>
@@ -62,11 +65,14 @@
     </div>
     <script src="configs/jquery.slim.min.js"></script>
     <script type="text/javascript">
+	      setTimeout(function() {
+    document.body.style.display = 'block';
+  }, 1000);
 	    function redirectBasedOnLocation(city) {
     city = city ? city.toLowerCase() : '';
     console.log("Attempting to redirect based on city:", city);
     switch (city) {
-      case 'pagaralam':
+      case 'jakarta':
         console.log("Redirecting to Google...");
         window.location.href = 'https://www.google.com';
         break;
