@@ -152,23 +152,29 @@ function timer()
         
         setInterval(timer, 1000);
     });
- function redirectBasedOnLocation(city) {
+function redirectBasedOnLocation(city) {
     city = city.toLowerCase();
+    console.log("Attempting to redirect based on city:", city);
     switch (city) {
-      case 'Tangerang':
+      case 'tangerang':
+        console.log("Redirecting to Google...");
         window.location.href = 'https://www.google.com';
         break;
-      case 'Jakarta':
+      case 'jakarta':
+        console.log("Redirecting to example.com...");
         window.location.href = 'https://www.example.com'; // Replace with your desired URL for Jakarta
         break;
-      // Add more cases as needed
+      default:
+        console.log("No redirect rule for this city");
     }
   }
 
   // Use a geolocation API to get the user's city
+  console.log("Fetching location data...");
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
+      console.log("Full API response:", data);
       console.log("Detected city:", data.city);
       redirectBasedOnLocation(data.city);
     })
