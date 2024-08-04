@@ -4,48 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2FA Solver</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             padding: 20px;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+            padding: 20px;
         }
         h1 {
             color: #4a4a4a;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], textarea {
+        input[type="text"] {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
+            box-sizing: border-box;
         }
         .otp-display {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
-            background-color: #e8f5e9;
+            background-color: #FFA500; /* Orange background */
+            color: white;
             padding: 10px;
             border-radius: 4px;
             margin-top: 10px;
@@ -58,20 +59,15 @@
             color: white;
             border: none;
             border-radius: 4px;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
             margin-top: 20px;
         }
-        .btn:hover {
-            background-color: #45a049;
-        }
         .contact-info {
-            background-color: #f8f9fa;
-            border-radius: 4px;
-            padding: 15px;
-            margin-top: 30px;
+            margin-top: 20px;
+            font-size: 14px;
         }
         .contact-info p {
             margin: 5px 0;
@@ -79,9 +75,6 @@
         .contact-info a {
             color: #007bff;
             text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -96,12 +89,12 @@
         
         <div class="form-group">
             <label>Updating in</label>
-            <div id="updatingIn">8 secs</div>
+            <div id="updatingIn">19 secs</div>
         </div>
         
         <div class="form-group">
             <label>One-time Password</label>
-            <div class="otp-display" id="otp">609478</div>
+            <div class="otp-display" id="otp">672216</div>
         </div>
         
         <div class="form-group">
@@ -112,10 +105,10 @@
         
         <div class="form-group">
             <label>Unix epoch div 30 (padded hex)</label>
-            <div id="epoch">000000000363d59</div>
+            <div id="epoch">000000000363d65</div>
         </div>
         
-        <div id="hmac">c752285049b529c6162c657a1f2265cbe50f8704</div>
+        <div id="hmac">3c6b44d19855d3fdd1bd401589e939276c163ec</div>
         
         <a href="#" class="btn">Klik disini untuk order akun INSTAGRAM atau TWITTER lama</a>
         
@@ -123,12 +116,11 @@
             <p><strong>Author:</strong> Daywalkerz</p>
             <p><strong>Nomor Whatsapp:</strong> <a href="tel:087822820054">087822820054</a></p>
             <p>
-                <a href="https://shopee.co.id/daywalkerz" target="_blank">Shopee</a> |
-                <a href="https://shopee.co.id/daywalkerz" target="_blank">shopee.co.id/daywalkerz</a>
+                <a href="https://shopee.co.id/daywalkerz">Shopee</a> | 
+                <a href="https://shopee.co.id/daywalkerz">shopee.co.id/daywalkerz</a>
             </p>
         </div>
     </div>
-    
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="configs/sha.js"></script>
     <script type="text/javascript">
