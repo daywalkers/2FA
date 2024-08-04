@@ -113,6 +113,10 @@
     for (var i = 0; i < base32.length; i++) {
         var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
         bits += leftpad(val.toString(2), 5, '0');
+	     // Pad the base32 string with enough characters to make its length a multiple of 8
+  const padding = base32.length % 8 ? '='.repeat(8 - base32.length % 8) : '';
+  base32 += padding;
+
     }
 
     for (var i = 0; i+4 <= bits.length; i+=4) {
