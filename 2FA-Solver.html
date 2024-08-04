@@ -175,7 +175,7 @@ function timer()
     var countDown = 30 - (epoch % 30);
     if (epoch % 30 == 0) updateOtp();
     $('#updatingIn').text(countDown + sect);
-    
+     updateOtp();
 }
 
 $(function () {
