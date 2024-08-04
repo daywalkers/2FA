@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="configs/bootstrap.min.css">
     <style>
         body {
+    display: block; /* Change this from 'none' to 'block' */
+  }
+        body {
             background-color: #f0f2f5;
             padding: 20px;
         }
@@ -156,9 +159,9 @@ $(function () {
         event.preventDefault();
     });
 
-    $('#secret').on('input', function () {
-        updateOtp();
-    });
+$('#secret').on('input', function () {
+    updateOtp();
+});
     
     setInterval(timer, 1000);
 });
