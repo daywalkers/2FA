@@ -139,7 +139,8 @@
         var epoch = Math.round(new Date().getTime() / 1000.0);
         var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, '0');
 		
-
+  const keyHex = base32tohex($('#secret').val());
+  const keyForHmac = keyHex.substr(keyHex.length - 40);
         // updated for jsSHA v2.0.0 - http://caligatio.github.io/jsSHA/
         var shaObj = new jsSHA("SHA-1", "HEX");
         shaObj.setHMACKey(key, "HEX");
