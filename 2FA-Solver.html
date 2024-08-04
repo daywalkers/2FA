@@ -99,10 +99,10 @@
 
     <script src="configs/jquery.slim.min.js"></script>
     <script type="text/javascript">
-    function dec2hex(s) { return (s < 15.5 ? '0' : '') + Math.round(s).toString(16); }
-        function hex2dec(s) { return parseInt(s, 16); }
+       function dec2hex(s) { return (s < 15.5 ? '0' : '') + Math.round(s).toString(16); }
+    function hex2dec(s) { return parseInt(s, 16); }
 
-        function base32tohex(base32) {
+   function base32tohex(base32) {
     var base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
     var bits = "";
     var hex = "";
@@ -175,19 +175,20 @@ function timer()
     
 }
 
-      $(function () {
+    $(function () {
         updateOtp();
 
         $('#update').click(function (event) {
-          updateOtp();
-          event.preventDefault();
+            updateOtp();
+            event.preventDefault();
         });
 
-        // Change this from keyup to input event
-      $('#secret').on('input', function() {
-  clearTimeout(updateOtpTimeout);
-  updateOtpTimeout = setTimeout(updateOtp, 500); // Call updateOtp after 500ms of no typing
-});
+        $('#secret').keyup(function () {
+            updateOtp();
+        });
+        
+        setInterval(timer, 1000);
+    });
 
     </script>
   </body>
