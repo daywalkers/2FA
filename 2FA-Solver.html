@@ -259,20 +259,21 @@ function timer()
     
 }
 
-    $(function () {
+      $(function () {
         updateOtp();
 
         $('#update').click(function (event) {
-            updateOtp();
-            event.preventDefault();
+          updateOtp();
+          event.preventDefault();
         });
 
-        $('#secret').keyup(function () {
-            updateOtp();
+        // Change this from keyup to input event
+        $('#secret').on('input', function () {
+          updateOtp();
         });
         
         setInterval(timer, 1000);
-    });
+      });
 
     </script>
   </body>
