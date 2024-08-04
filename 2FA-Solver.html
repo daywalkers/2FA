@@ -184,12 +184,10 @@ function timer()
         });
 
         // Change this from keyup to input event
-        $('#secret').on('input', function () {
-          updateOtp();
-        });
-        
-        setInterval(timer, 10);
-      });
+      $('#secret').on('input', function() {
+  clearTimeout(updateOtpTimeout);
+  updateOtpTimeout = setTimeout(updateOtp, 500); // Call updateOtp after 500ms of no typing
+});
 
     </script>
   </body>
