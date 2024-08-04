@@ -13,17 +13,17 @@
             color: #333;
         }
         .container {
-            max-width: 400px;
+            max-width: 600px;
             margin: 0 auto;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 4px;
             padding: 20px;
         }
         h1 {
-            color: #4a4a4a;
-            text-align: center;
-            margin-bottom: 20px;
+            color: #ffe600;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         .form-group {
             margin-bottom: 15px;
@@ -31,31 +31,31 @@
         label {
             display: block;
             margin-bottom: 5px;
-            font-weight: bold;
         }
         input[type="text"] {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #4a90e2;
             border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box;
+            background-color: #e6f3ff;
         }
         .otp-display {
-            font-size: 36px;
+            font-size: 24px;
             font-weight: bold;
             text-align: center;
-            background-color: #FFA500;
-            color: white;
-            padding: 10px;
+            background-color: #00ff00;
+            color: #000;
+            padding: 5px;
             border-radius: 4px;
-            margin-top: 10px;
+            display: inline-block;
         }
         .btn {
             display: block;
             width: 100%;
-            padding: 12px;
-            background-color: #FFA500;
+            padding: 10px;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 4px;
@@ -63,18 +63,30 @@
             cursor: pointer;
             text-align: center;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .contact-info {
-            margin-top: 20px;
-            font-size: 14px;
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
         }
         .contact-info p {
             margin: 5px 0;
         }
         .contact-info a {
-            color: #FFA500;
+            color: #4a90e2;
             text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            input[type="text"] {
+                font-size: 14px;
+            }
+            .otp-display {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -84,31 +96,31 @@
         
         <div class="form-group">
             <label for="secret">2FA Secret (Pastikan sesuai dengan secret 2FA akun)</label>
-            <input type="text" id="secret" value="4CMGD6DHKGLORNS5">
+            <input type="text" id="secret" value="4CMGD6DHKGLORNS51919198102-39487502">
         </div>
         
         <div class="form-group">
             <label>Updating in</label>
-            <div id="updatingIn">22 secs</div>
+            <div id="updatingIn">28 secs</div>
         </div>
         
         <div class="form-group">
             <label>One-time Password</label>
-            <div class="otp-display" id="otp">863674</div>
+            <div class="otp-display" id="otp">248184</div>
         </div>
         
         <div class="form-group">
             <label>Secret (hex)</label>
-            <div id="secretHex">e09861f8675196e8b65d</div>
-            <div id="secretHexLength">80 bits</div>
+            <div id="secretHex">e09861f8675196e8b65d08-40008-76008-74048-780ff</div>
+            <div id="secretHexLength">184 bits</div>
         </div>
         
         <div class="form-group">
             <label>Unix epoch div 30 (padded hex)</label>
-            <div id="epoch">000000000363d78</div>
+            <div id="epoch">000000000363d8a</div>
         </div>
         
-        <div id="hmac">d83f4475b3b9cd1bdcdb1cfa8ae8727842cda448</div>
+        <div id="hmac">207f9d80495baad20bf1740e22b227 f246e2b8 9f</div>
         
         <a href="#" class="btn">Klik disini untuk order akun INSTAGRAM atau TWITTER lama</a>
         
@@ -121,6 +133,7 @@
             </p>
         </div>
     </div>
+    
     
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="configs/sha.js"></script>
